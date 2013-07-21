@@ -1,0 +1,16 @@
+id: BlogStatDataAPI
+name: BlogStatDataAPI
+version: 1.0
+author_link: http://www.h-fj.com/blog/
+author_name: Hajime Fujimoto
+description: <__trans phrase="Blog Status Data API">
+l10n_class: BlogStatDataAPI::L10N
+applications:
+  data_api:
+    endpoints:
+      - id: blogstat
+        route: /sites/:blog_id/blogstat
+        verb: GET
+        version: 1
+        handler: $BlogStatDataAPI::BlogStatDataAPI::Plugin::blogstat
+        requires_login: 0
